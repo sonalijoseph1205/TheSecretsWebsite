@@ -214,6 +214,5 @@ if (port == null || port == "") {
 }
 
 
-app.listen(port, function() {
-  console.log("Server has started Successfully");
-});
+let port = process.env.PORT || 3000;
+app.listen(port, () => console.log(`Server listening on port ${port}`))
